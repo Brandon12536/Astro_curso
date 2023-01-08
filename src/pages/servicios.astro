@@ -1,0 +1,26 @@
+---
+import Card from "../components/card.astro";
+import Layout from "../components/Layout.astro";
+---
+
+<Layout pageTitle="Servicios">
+  <h1>Mis servicios</h1>
+  <p>
+    Ofrecemos distintos servicios para tu negocio, a un costo muy accesible.
+  </p>
+
+  <!--Llamamos el componente CARD -->
+  <Card title="Páginas web" content="Ofrecemos servicio y diseño de tu propio sitio web " />
+  <Card
+    title="Programación"
+    content="Servicios de desarrollo de aplicaciones"
+  />
+  <Card title="Diseño" content="Diseño de interfaces web" />
+  <Card
+    title="Asistencia Profesional"
+    content="Ofrecemos asistencia profesional"
+  />
+  <Card />
+</Layout>
+
+<h5>&copy; Brandon Pérez Reyes</h5>

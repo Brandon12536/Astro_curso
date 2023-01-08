@@ -1,0 +1,39 @@
+---
+interface Props{
+    title?: string
+    content?: string
+}
+const { title = "Default title", content = "Content Default" } = Astro.props;
+
+//console.log(title)
+---
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+        <title>Card</title>
+    </head>
+    <body> </body>
+
+
+    <div class="bg-sky-500 m-2 p-4 mb-3">
+        <h1>{title}</h1>
+        <p>{content}</p>
+    </div>
+
+    <style>
+        .card {
+            background: rgb(253, 91, 91);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+                0 25px 50px 0 rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin-bottom: 5px;
+        }
+    </style>
+</html>

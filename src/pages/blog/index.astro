@@ -1,0 +1,49 @@
+---
+import Layout from "../../components/Layout.astro";
+import bgImage from "../../images/frontend.png";
+
+const posts = await Astro.glob("./posts/*.md"); //Me trae los archivos que estén con la extensión .md
+console.log();
+---
+
+<Layout
+  pageTitle="Blog de Desarrollo"
+  pageDescription="Este tutorial de desarrollo y programación"
+>
+  <h1 class="blog">Mi Primer Blog</h1>
+
+  <img class="imagen" src={bgImage} alt="" />
+
+  {
+    posts.map((post) => {
+      return (
+        <a href={post.url} class="link">
+          {post.frontmatter.title}
+        </a>
+      );
+    })
+  }
+
+  <style>
+    .link {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 2%;
+      font-size: x-large;
+      display: flex;
+      justify-content: center;
+    }
+    .imagen {
+      width: 40%;
+      height: 40%;
+      display: flex;
+      margin-bottom: 5%;
+      justify-content: center;
+      margin-left: 30%;
+    }
+    .blog{
+        text-align: center;
+    }
+  </style>
+</Layout>
